@@ -7,6 +7,7 @@ n = length(fileList);
 baseCnt = 0;
 carCnt = 0;
 armorCnt = zeros(8);
+emptyCnt = 0;
 for i=1:n
     if (mod(i,100)==0) 
         disp(i);
@@ -23,7 +24,6 @@ for i=1:n
         annotation = parseXMLAnnotation(annotationPath+annotationfile);
         % Crop armor
         for armorIndex=1:(max(size(annotation.armor)))
-           armorColor = annotation.armor(armorIndex).color;
            armorClass = annotation.armor(armorIndex).class;
            if strcmp(armorClass, 'none')
                continue;
@@ -74,6 +74,39 @@ for i=1:n
             picPath = ['./data/watcher/', num2str(watcherCnt), '.jpg'];
             imwrite(watcherPic, picPath);
             watcherCnt = watcherCnt + 1;
+        end
+        % Build Empty Examples
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 50);
+            y = unifrnd(1, 1080 - 50);
+            emptyPic = imcrop(imageArrays, [x, y, 50, 50]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 75);
+            y = unifrnd(1, 1080 - 75);
+            emptyPic = imcrop(imageArrays, [x, y, 75, 75]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 100);
+            y = unifrnd(1, 1080 - 100);
+            emptyPic = imcrop(imageArrays, [x, y, 100, 100]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 200);
+            y = unifrnd(1, 1080 - 200);
+            emptyPic = imcrop(imageArrays, [x, y, 200, 200]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
         end
     end
 end
@@ -152,6 +185,39 @@ for i=1:n
             imwrite(watcherPic, picPath);
             watcherCnt = watcherCnt + 1;
         end
+        % Build Empty Examples
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 50);
+            y = unifrnd(1, 1080 - 50);
+            emptyPic = imcrop(imageArrays, [x, y, 50, 50]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 75);
+            y = unifrnd(1, 1080 - 75);
+            emptyPic = imcrop(imageArrays, [x, y, 75, 75]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 100);
+            y = unifrnd(1, 1080 - 100);
+            emptyPic = imcrop(imageArrays, [x, y, 100, 100]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 200);
+            y = unifrnd(1, 1080 - 200);
+            emptyPic = imcrop(imageArrays, [x, y, 200, 200]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
     end
 end
 
@@ -229,6 +295,39 @@ for i=1:n
             imwrite(watcherPic, picPath);
             watcherCnt = watcherCnt + 1;
         end
+        % Build Empty Examples
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 50);
+            y = unifrnd(1, 1080 - 50);
+            emptyPic = imcrop(imageArrays, [x, y, 50, 50]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 75);
+            y = unifrnd(1, 1080 - 75);
+            emptyPic = imcrop(imageArrays, [x, y, 75, 75]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 100);
+            y = unifrnd(1, 1080 - 100);
+            emptyPic = imcrop(imageArrays, [x, y, 100, 100]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 200);
+            y = unifrnd(1, 1080 - 200);
+            emptyPic = imcrop(imageArrays, [x, y, 200, 200]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
     end
 end
 
@@ -305,6 +404,39 @@ for i=1:n
             picPath = ['./data/watcher/', num2str(watcherCnt), '.jpg'];
             imwrite(watcherPic, picPath);
             watcherCnt = watcherCnt + 1;
+        end
+        % Build Empty Examples
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 50);
+            y = unifrnd(1, 1080 - 50);
+            emptyPic = imcrop(imageArrays, [x, y, 50, 50]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 75);
+            y = unifrnd(1, 1080 - 75);
+            emptyPic = imcrop(imageArrays, [x, y, 75, 75]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 100);
+            y = unifrnd(1, 1080 - 100);
+            emptyPic = imcrop(imageArrays, [x, y, 100, 100]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
+        end
+        for emptyIndex=1:3
+            x = unifrnd(1, 1920 - 200);
+            y = unifrnd(1, 1080 - 200);
+            emptyPic = imcrop(imageArrays, [x, y, 200, 200]);
+            picPath = ['./data/empty/', num2str(emptyCnt), '.jpg'];
+            imwrite(emptyPic, picPath);
+            emptyCnt = emptyCnt + 1 ;
         end
     end
 end
